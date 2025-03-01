@@ -4,6 +4,7 @@ import Base_Url from '../../../config'
 
 const DisplayComponent = ({ blog }) => {
  //likes and comments
+ console.log(`${Base_Url}/images/${blog.blogImage}`)
  const [Like, setLike] = useState(blog.likes)
  const [Comment, setComment] = useState(blog.comments)
 
@@ -29,7 +30,7 @@ const DisplayComponent = ({ blog }) => {
                 <div className="text-container">
 
                     <h3 style={{ color: "gray" }}>{blog.blogID}</h3>
-                    <img src={`${Base_Url}/images/${blog.blogImage}`} alt="blog-post" height="250px" width="310px" />
+                  <img src={`https://raw.githubusercontent.com/D-I-V-Y-A-S/blog-app-backend/main/images/${blog.blogImage}`} alt="blog-post" height="250px" width="310px" />
                     <h2 className='status'> {blog.blogTitle}</h2>
                     <p className='status'> {blog.blogArticle}</p>
                     <span style={{ color: "deeppink" }}>{blog.blogCategory}</span>
